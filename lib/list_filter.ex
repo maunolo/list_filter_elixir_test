@@ -3,7 +3,7 @@ require Integer
 defmodule ListFilter do
   def call(list) do
     list
-    |> Enum.count(fn string -> is_string_odd_integer(string) end)
+    |> Enum.count(&is_string_odd_integer(&1))
   end
 
   defp is_string_odd_integer(string) do
